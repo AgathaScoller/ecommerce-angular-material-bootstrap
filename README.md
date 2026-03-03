@@ -1,62 +1,56 @@
-E-commerce Angular - Integração Material Design e Bootstrap
-Este repositório contém a implementação de uma interface de loja virtual desenvolvida com o framework Angular. O projeto integra o Angular Material para componentes estruturais e o Bootstrap para o sistema de grelha e componentes de formulário, conforme os requisitos da atividade de desenvolvimento de interfaces.
+**E-commerce Angular - Integração Material Design e Bootstrap**
+
+Este repositório contém a implementação de uma interface de loja virtual desenvolvida com o framework Angular. O projeto foca na integração entre componentes do Angular Material e o sistema de estilização do Bootstrap 5, atendendo aos requisitos de arquitetura de componentes e SPA (Single Page Application).
 
 Tecnologias e Dependências
-Framework: Angular (v16 ou superior)
+Framework: Angular v16+
 
-Linguagem: TypeScript (Orientação a Objetos)
+Linguagem: TypeScript
 
-Estilização e UI:
+Bibliotecas de UI: Angular Material & Bootstrap 5
 
-Angular Material: Utilizado em MatToolbar, MatCard e MatGridList.
+Estrutura de Componentes
+O projeto foi modularizado para separar as responsabilidades da interface conforme a tabela abaixo:
 
-Bootstrap 5: Utilizado para o layout responsivo e estilização da tela de login.
-
-Gestão de Versões: Git/GitHub.
-
-Estrutura do Projeto
-A aplicação está dividida em componentes modulares para garantir a manutenibilidade:
-
-Menu: Cabeçalho com navegação utilizando mat-toolbar.
-
-Início: Vitrine de produtos organizada em grelha com cartões informativos.
-
-Login: Área de autenticação com formulário formatado via Bootstrap.
-
-Rodapé: Secção informativa final com estilização CSS personalizada.
-
+Componente	Função	Biblioteca Principal
+Menu	Navegação superior e logótipo	Angular Material (mat-toolbar)
+Início	Vitrine de produtos e banners promocionais	Material Cards & Bootstrap Carousel
+Login	Interface de autenticação de utilizador	Bootstrap Forms
+Rodapé	Informações institucionais e créditos	CSS Customizado
 Configuração do Ambiente
-Para replicar o ambiente de desenvolvimento, verifique as referências no ficheiro angular.json:
+Assegure que as dependências de estilo e scripts estão devidamente mapeadas no ficheiro angular.json para o correto funcionamento das bibliotecas externas:
 
-Styles:
+JSON
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.css",
+  "@angular/material/prebuilt-themes/indigo-pink.css",
+  "src/styles.css"
+],
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.js"
+]
+Instruções de Instalação e Execução
+Para configurar o ambiente localmente, execute os seguintes comandos no terminal:
 
-node_modules/bootstrap/dist/css/bootstrap.css
-
-@angular/material/prebuilt-themes/indigo-pink.css
-
-Scripts:
-
-node_modules/bootstrap/dist/js/bootstrap.js
-
-Instruções de Execução
-Instale as dependências do projeto:
+1. Instalação de dependências:
 
 Bash
 npm install
-Inicie o servidor de desenvolvimento:
+2. Inicialização do servidor de desenvolvimento:
 
 Bash
 ng serve
-Aceda à aplicação via navegador no endereço:
-http://localhost:4200/
+3. Acesso à aplicação:
 
+Plaintext
+URL: http://localhost:4200/
 Requisitos Técnicos Implementados
-Definição de classes e métodos em TypeScript.
+TypeScript: Utilização de tipagem estática, definição de classes, construtores e métodos para controlo da lógica dos componentes.
 
-Configuração de rotas para navegação entre páginas.
+Modularização: Configuração do ficheiro app.module.ts com a importação de módulos específicos (MatButtonModule, MatCardModule, MatInputModule).
 
-Injeção de módulos do Angular Material no app.module.ts.
+Roteamento: Implementação do ficheiro app-routing.module.ts para gestão de navegação entre as páginas de Início e Login.
 
-Implementação de design responsivo.
+Layout Responsivo: Uso do sistema de grelha (Grid System) para adaptação da interface a diferentes dispositivos.
 
-Este documento serve como registo da entrega da atividade prática de Frameworks com consumo de API.
+Este projeto foi desenvolvido como parte da atividade prática de Frameworks com Consumo de API.
