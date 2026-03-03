@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <img src="assets/img/logo.png" alt="Logo">
+  <span>LojaGames</span>
+  <span class="example-spacer"></span>
+  <a routerLink="/inicio">Início</a>
+  <span> | </span>
+  <a routerLink="/login">Login</a>
+</mat-toolbar>
